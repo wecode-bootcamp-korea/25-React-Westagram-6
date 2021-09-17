@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
@@ -7,7 +8,7 @@ class MainHoYoung extends React.Component {
     return (
       <>
         <Nav />
-        <main>
+        <main class="MainHoYoung">
           <div className="feeds">
             <article>
               <header>

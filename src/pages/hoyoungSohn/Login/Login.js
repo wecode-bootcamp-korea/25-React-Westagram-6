@@ -5,7 +5,7 @@ class LoginHoYoung extends React.Component {
   render() {
     return (
       <>
-        <div className="container">
+        <div className="LoginHoYoung">
           <h1>Westagram</h1>
           <form className="login-form">
             <input
