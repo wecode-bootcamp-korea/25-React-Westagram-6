@@ -1,8 +1,14 @@
-style {
-  @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700&family=Lobster&family=Lobster+Two:ital@1&family=Roboto:wght@100;300;400&display=swap');
-}
-
 * {
   box-sizing: border-box;
   font-family: 'Gothic A1', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
 }
