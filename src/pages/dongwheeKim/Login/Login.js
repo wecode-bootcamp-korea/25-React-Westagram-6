@@ -3,12 +3,12 @@ import './Login.scss';
 
 class LoginDongWhee extends React.Component {
   goToMain = () => {
-    this.props.history.push('/main');
+    this.props.history.push('/main-whee');
   };
 
   render() {
     return (
-      <main className="layoutWrapper">
+      <main className="LoginDongWhee">
         <div className="loginLayout">
           <h1 className="logoName">Westagram</h1>
           <form className="loginValueWrapper">
