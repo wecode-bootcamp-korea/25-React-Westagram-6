@@ -1,26 +1,28 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 
 /* Dongwhee */
-import LoginDongWhee from "./pages/dongwheeKim/Login/Login";
-import MainDongWhee from "./pages/dongwheeKim/Main/Main";
+import LoginDongWhee from './pages/dongwheeKim/Login/Login';
+import MainDongWhee from './pages/dongwheeKim/Main/Main';
 
 /* Goun */
-import LoginGoUn from "./pages/gounSeo/Login/Login";
-import MainGoUn from "./pages/gounSeo/Main/Main";
+import LoginGoUn from './pages/gounSeo/Login/Login';
+import MainGoUn from './pages/gounSeo/Main/Main';
 
 /* Hoyoung */
-import LoginHoYoung from "./pages/hoyoungSohn/Login/Login";
-import MainHoYoung from "./pages/hoyoungSohn/Main/Main";
+import LoginHoYoung from './pages/hoyoungSohn/Login/Login';
+import MainHoYoung from './pages/hoyoungSohn/Main/Main';
 
 /* Hoyoung */
-import LoginSueYeon from "./pages/sueyeonYoon/Login/Login";
-import MainSueYeon from "./pages/sueyeonYoon/Main/Main";
+import LoginSueYeon from './pages/sueyeonYoon/Login/Login';
+import MainSueYeon from './pages/sueyeonYoon/Main/Main';
 
 class Routes extends Component {
   render() {
     return (
       <Router>
+        <Nav />
         <Switch>
           <Route exact path="/login-whee" component={LoginDongWhee} />
           <Route exact path="/main-whee" component={MainDongWhee} />
