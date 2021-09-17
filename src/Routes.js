@@ -22,7 +22,6 @@ class Routes extends Component {
   render() {
     return (
       <Router>
-        <Nav />
         <Switch>
           <Route exact path="/login-whee" component={LoginDongWhee} />
           <Route exact path="/main-whee" component={MainDongWhee} />
