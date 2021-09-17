@@ -1,1 +1,88 @@
-// a
+.layoutWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(250, 250, 250);
+
+  .loginLayout {
+    width: 350px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: rgb(255, 255, 255);
+
+    .logoName {
+      display: flex;
+      justify-content: center;
+      margin: 22px auto 12px;
+      font-family: 'Lobster';
+      font-size: 30px;
+    }
+
+    .loginValueWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 200px;
+      margin-bottom: 50px;
+      margin-top: 40px;
+      align-items: center;
+
+      input {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      input::placeholder {
+        color: rgb(214, 214, 214);
+        font-size: 12px;
+      }
+
+      input:hover {
+        border-color: #b9b9b9 #b9b9b9 #b9b9b9 #b9b9b9;
+      }
+
+      .loginId {
+        width: 268px;
+        border-radius: 5px;
+        border: 1px solid rgb(219, 219, 219);
+        background-color: rgb(250, 250, 250);
+        font-size: 12px;
+      }
+
+      .loginPw {
+        width: 268px;
+        border-radius: 5px;
+        border: 1px solid rgb(219, 219, 219);
+        background-color: rgb(250, 250, 250);
+        font-size: 12px;
+      }
+
+      .loginBottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        .loginButton {
+          width: 268px;
+          padding: 8px;
+          margin-bottom: 30px;
+          border: 0px;
+          border-radius: 5px;
+          background-color: rgb(84, 149, 242);
+          color: white;
+          font-size: 14px;
+        }
+
+        .forgetPw {
+          color: rgb(60, 81, 129);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

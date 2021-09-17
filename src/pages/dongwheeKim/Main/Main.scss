@@ -1,1 +1,351 @@
-// a
+.mainAll {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  .feedWrapper {
+    width: 616px;
+    margin-top: 50px;
+    margin-right: 50px;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: white;
+
+    .userId {
+      width: 616px;
+      border-bottom: 1px solid rgb(219, 219, 219);
+
+      .userPhoto {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        border: 1px solid rgb(219, 219, 219);
+        // background-image: url('../../../assets/images/userphoto.jpg');
+        background-image: url('../../../assets/images/userphoto.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .userName {
+        position: relative;
+        bottom: 20px;
+        left: 70px;
+        font-weight: bold;
+        color: rgb(38, 38, 38);
+      }
+    }
+
+    .feedPhoto {
+      width: 616px;
+      height: 614px;
+      background-image: url('../../../assets/images/feedphoto.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .buttonsSection {
+    width: 616px;
+    height: 40px;
+    padding: 8px;
+
+    .communicationButtons {
+      position: relative;
+      left: 13px;
+      margin-right: 7px;
+      font-size: 23px;
+
+      #farComment {
+        position: relative;
+        left: 10px;
+      }
+
+      #farPaperPlane {
+        position: relative;
+        left: 20px;
+      }
+    }
+
+    #saved {
+      position: relative;
+      left: 500px;
+      font-size: 23px;
+    }
+  }
+
+  .likesCount {
+    width: 616px;
+    height: 20px;
+    margin-top: 5px;
+
+    .likesPersonOne {
+      display: inline-block;
+      position: relative;
+      left: 15px;
+      width: 23px;
+      height: 23px;
+      border: none;
+      border-radius: 50%;
+      background-image: url('../../../assets/images/personone.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .likesPersonTwo {
+      display: inline-block;
+      position: relative;
+      left: 4px;
+      width: 23px;
+      height: 23px;
+      border: none;
+      border-radius: 50%;
+      background-image: url('../../../assets/images/persontwo.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .likesHowMany {
+      display: inline-block;
+      position: relative;
+      top: -5px;
+      left: 7px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .aboutFeed {
+    width: 616px;
+    margin-top: 5px;
+
+    .feedExplain {
+      display: inline-block;
+      position: relative;
+      left: 20px;
+      margin: 3px 0;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .feedCreator {
+      display: inline-block;
+      position: relative;
+      left: 15px;
+      margin: 3px 0;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+
+  .comment {
+    width: 616px;
+
+    .feedCreator {
+      display: inline-block;
+      position: relative;
+      left: 15px;
+      margin: 3px 0;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .feedComment {
+      margin-left: 20px;
+    }
+  }
+
+  .uploadTime {
+    position: relative;
+    left: 15px;
+    top: 2px;
+    width: 616px;
+    margin-bottom: 10px;
+    color: rgb(187, 187, 187);
+    font-size: 10px;
+  }
+
+  .commentField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 616px;
+    height: 45px;
+    margin-top: 5px;
+    border-top: 1px solid rgb(219, 219, 219);
+
+    .commentImoticon {
+      width: 35px;
+      height: 35px;
+      margin-left: 10px;
+      border: none;
+      background-color: transparent;
+
+      #smileWink {
+        margin-left: -5px;
+        font-size: 23px;
+      }
+
+      #smileWink:hover {
+        cursor: pointer;
+        color: orange;
+      }
+    }
+
+    #comments {
+      width: 83%;
+      border: none;
+      font-size: 14px;
+    }
+
+    .submitButton {
+      margin-right: 20px;
+      border: none;
+      color: rgb(197, 223, 250);
+      background-color: transparent;
+    }
+  }
+
+  .mainRight {
+    width: 293px;
+    margin: 0;
+    margin-right: 100px;
+    margin-top: 50px;
+    background-color: transparent;
+
+    .myPhoto {
+      display: inline-block;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      margin: 0;
+      background-image: url('../../../assets/images/myphoto.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .profileWrapper {
+      position: relative;
+      top: -10px;
+      left: 10px;
+      display: inline-block;
+      background-color: transparent;
+      width: 60%;
+
+      .myName {
+        position: relative;
+        top: -15px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    .recommendSection {
+      margin-top: 20px;
+
+      .topWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin-bottom: 20px;
+
+        .recommend {
+          color: rgb(142, 142, 142);
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .viewAll {
+          color: rgb(38, 38, 38);
+          font-weight: 600;
+          font-size: 12px;
+        }
+      }
+
+      .recName {
+        position: relative;
+        top: -5px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .recDesc {
+        position: relative;
+        top: -3px;
+        font-size: 13px;
+        opacity: 0.5;
+      }
+
+      .profile {
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+        .profilePhoto {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .one {
+          background-image: url('../../../assets/images/apple.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        .two {
+          background-image: url('../../../assets/images/lvmh.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        .three {
+          background-image: url('../../../assets/images/toss.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        .four {
+          background-image: url('../../../assets/images/kakao.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        .five {
+          background-image: url('../../../assets/images/mdn.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        .profileWrap {
+          position: relative;
+          top: 0px;
+          left: 10px;
+          display: inline-block;
+          width: 245px;
+          background-color: transparent;
+
+          .follow {
+            position: absolute;
+            top: 8px;
+            right: 5px;
+            color: rgb(62, 149, 239);
+            font-weight: 600;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .explainSite {
+        display: inline-block;
+        margin-top: 20px;
+        color: rgb(201, 201, 201);
+        font-size: 11px;
+      }
+    }
+  }
+}
