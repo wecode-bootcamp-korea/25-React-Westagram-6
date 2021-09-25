@@ -6,6 +6,26 @@ class LoginDongWhee extends React.Component {
     this.props.history.push('/main-whee');
   };
 
+  constructor() {
+    super();
+    this.state = {
+      textId: '',
+      textPw: '',
+    };
+  }
+
+  handleIdInput = event => {
+    this.setState({
+      textId: event.target.value,
+    });
+  };
+
+  handlePwInput = event => {
+    this.setState({
+      textPw: event.target.value,
+    });
+  };
+
   render() {
     return (
       <main className="LoginDongWhee">
@@ -19,14 +39,15 @@ class LoginDongWhee extends React.Component {
                 name="userid"
                 className="loginId"
                 placeholder="  전화번호, 사용자 이름 또는 이메일"
+                onChange={this.handleIdInput}
               />
-
               <input
                 type="password"
                 alt=""
                 name="userpw"
                 className="loginPw"
                 placeholder="  비밀번호"
+                onChange={this.handlePwInput}
               />
             </div>
 
