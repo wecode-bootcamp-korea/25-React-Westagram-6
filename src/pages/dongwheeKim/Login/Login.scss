@@ -67,13 +67,24 @@
         justify-content: space-between;
         margin-top: 8px;
 
-        .loginButton {
+        .loginButtonOn {
           width: 268px;
           padding: 8px;
           margin-bottom: 30px;
           border: 0px;
           border-radius: 5px;
           background-color: rgb(84, 149, 242);
+          color: white;
+          font-size: 14px;
+        }
+
+        .loginButtonOff {
+          width: 268px;
+          padding: 8px;
+          margin-bottom: 30px;
+          border: 0px;
+          border-radius: 5px;
+          background-color: rgb(197, 223, 250);
           color: white;
           font-size: 14px;
         }
