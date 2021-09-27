@@ -1,7 +1,16 @@
 import React from 'react';
 import './Main.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faCompass, faUser } from '@fortawesome/free-regular-svg-icons';
 
 class MainGoUn extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
       <main className="mainGoun">
@@ -18,19 +27,15 @@ class MainGoUn extends React.Component {
               alt="baking"
             />
             <ul className="middleBar">
-              <li className="likeBtn">
+              <li className="likeBtn"> </li>
+              <li>
                 <a href=" ">
-                  <i className="fas fa-heart" style={{ color: 'red' }}></i>
+                  <i className="fas fa-heart"> </i>
                 </a>
               </li>
               <li>
                 <a href=" ">
-                  <i className="far fa-comment"></i>{' '}
-                </a>
-              </li>
-              <li>
-                <a href=" ">
-                  <i className="fas fa-upload"></i>{' '}
+                  <i className="fas fa-upload"></i>
                 </a>
               </li>
               <li>
