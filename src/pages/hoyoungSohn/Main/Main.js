@@ -72,9 +72,7 @@ class MainHoYoung extends React.Component {
                 </button>
               </div>
 
-              <ul className="reply">
-                <li>리플달자</li>
-              </ul>
+              <ul className="reply">{/* <li>리플달자</li> */}</ul>
             </article>
 
             <article>
