@@ -59,8 +59,13 @@ class LoginDongWhee extends React.Component {
     }
   };
 
+  loginWithEnter = e => {
+    if (e.key === 'Enter') {
+      this.goToMain();
+    }
+  };
+
   render() {
-    console.log(this.state);
     const { loginButtonColor } = this.state;
     return (
       <main className="LoginDongWhee">
@@ -85,6 +90,7 @@ class LoginDongWhee extends React.Component {
                 placeholder="  비밀번호"
                 onChange={this.handlePwInput}
                 onKeyUp={this.toggleLoginButton}
+                onKeyPress={this.loginWithEnter}
               />
             </div>
 
@@ -95,6 +101,7 @@ class LoginDongWhee extends React.Component {
                   loginButtonColor ? 'loginButtonOn' : 'loginButtonOff'
                 }
                 type="button"
+                disabled={!this.state.loginButtonColor}
               >
                 로그인
               </button>

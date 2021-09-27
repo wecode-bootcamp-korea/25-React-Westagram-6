@@ -9,6 +9,31 @@ import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faSmileWink } from '@fortawesome/free-regular-svg-icons';
 
 class MainDongWhee extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      value: '',
+      commentList: [],
+    };
+  }
+
+  getValue = e => {
+    this.setState({ value: e.target.value });
+  };
+
+  addComment = () => {
+    this.setState({
+      commentList: this.state.commentList.concat(this.state.value),
+      value: '',
+    });
+  };
+
+  addCommentEnter = e => {
+    if (e.key === 'Enter') {
+      this.addComment();
+    }
+  };
+
   render() {
     return (
       <>
@@ -49,12 +74,15 @@ class MainDongWhee extends React.Component {
                     </div>
                   </section>
                   <ul className="commentSection">
-                    <li>
+                    <div>
                       <span className="commentCreator">leediana</span>
                       <span className="feedComment">
                         What a stunning view !!!
                       </span>
-                    </li>
+                      {this.state.commentList.map((comment, idx) => {
+                        return <li key={idx}> {comment} </li>;
+                      })}
+                    </div>
                   </ul>
                   <section className="uploadTime">59분 전</section>
                   <div className="commentField">
@@ -65,8 +93,15 @@ class MainDongWhee extends React.Component {
                       type="text"
                       id="comments"
                       placeholder="댓글 달기..."
+                      onChange={this.getValue}
+                      onKeyPress={this.addCommentEnter}
+                      value={this.state.value}
                     />
-                    <button type="submit" className="submitButton">
+                    <button
+                      type="submit"
+                      className="submitButton"
+                      onClick={this.addComment}
+                    >
                       게시
                     </button>
                   </div>
