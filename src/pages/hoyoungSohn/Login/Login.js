@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Login.scss';
 
 class LoginHoYoung extends React.Component {
@@ -18,16 +19,12 @@ class LoginHoYoung extends React.Component {
     this.setState({
       idValue: e.target.value,
     });
-    console.log(e.target.value);
-    console.log(this.state);
   };
 
-  handlePwInput = a => {
+  handlePwInput = e => {
     this.setState({
-      pwValue: a.target.value,
+      pwValue: e.target.value,
     });
-    console.log(a.target.value);
-    console.log(this.state);
   };
 
   render() {
@@ -49,11 +46,19 @@ class LoginHoYoung extends React.Component {
               onChange={this.handlePwInput}
             />
             {/* <Link to = './Main'><button className ='loginBtn'>로그인</button></Link> */}
-            <button className="loginBtn" onClick={this.goToMain}>
+            <button
+              className={`loginBtn ${
+                this.state.idValue.includes('@') &&
+                this.state.pwValue.length >= 5
+                  ? 'button-on'
+                  : ''
+              }`}
+              onClick={this.goToMain}
+            >
               로그인
             </button>
           </form>
-          <a href="">비밀번호를 잊으셨나요?</a>
+          <Link to="">비밀번호를 잊으셨나요?</Link>
         </div>
       </>
     );
