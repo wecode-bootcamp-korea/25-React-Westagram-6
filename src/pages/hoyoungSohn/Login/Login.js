@@ -45,7 +45,6 @@ class LoginHoYoung extends React.Component {
               placeholder="비밀번호"
               onChange={this.handlePwInput}
             />
-            {/* <Link to = './Main'><button className ='loginBtn'>로그인</button></Link> */}
             <button
               className={`loginBtn ${
                 this.state.idValue.includes('@') &&
