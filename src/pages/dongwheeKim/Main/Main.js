@@ -66,7 +66,7 @@ class MainDongWhee extends React.Component {
                     <div className="firstLikePerson"></div>
                     <div className="secondLikePerson"></div>
                     <div className="howManyLikes">
-                      dongwheekeem님 외 3,110,979명이 좋아합니다
+                      whatsappguys님 외 3,110,979명이 좋아합니다
                     </div>
                   </section>
                   <section className="feed">
