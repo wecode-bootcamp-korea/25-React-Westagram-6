@@ -68,9 +68,14 @@
 
         .upload-button {
           width: 50px;
-          border: 0;
-          color: #b9dffc;
+          // border: 0;
+          // color: #b9dffc;
+          color: blue;
           background-color: white;
+
+          .button-on {
+            color: #108dec;
+          }
         }
       }
     }
@@ -94,21 +99,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    .canon_mj {
-      margin-left: 15px;
-      font-size: 13px;
-    }
+    margin-bottom: 15px;
   }
 
   .reply {
-    list-style: none;
-    margin-top: 0;
-    padding-left: 15px;
+    margin-top: 10px;
+    padding-left: 30px;
     font-size: 13px;
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      .bold {
+        margin-left: 10px;
+        font-weight: bold;
+      }
     }
   }
 

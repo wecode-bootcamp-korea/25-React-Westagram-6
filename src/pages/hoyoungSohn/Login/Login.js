@@ -3,28 +3,47 @@ import { Link } from 'react-router-dom';
 import './Login.scss';
 
 class LoginHoYoung extends React.Component {
-  goToMain = () => {
-    this.props.history.push('/main-young');
-  };
-
   constructor() {
     super();
     this.state = {
-      idValue: '',
-      pwValue: '',
+      email: '',
+      password: '',
     };
   }
 
+  goToMain = () => {
+    this.props.history.push('/main-young');
+    fetch('http://10.58.3.77:8000/user_login/', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+  };
+
   handleIdInput = e => {
     this.setState({
-      idValue: e.target.value,
+      email: e.target.value,
     });
   };
 
   handlePwInput = e => {
     this.setState({
-      pwValue: e.target.value,
+      password: e.target.value,
     });
+  };
+
+  btnClick = () => {
+    console.log(`id는 : ${this.state.email} pw는 : ${this.state.password}`);
+  };
+
+  inputKeyPress = e => {
+    if (e.key === 'Enter') {
+      this.btnClick();
+    }
   };
 
   render() {
@@ -44,15 +63,18 @@ class LoginHoYoung extends React.Component {
               name="password"
               placeholder="비밀번호"
               onChange={this.handlePwInput}
+              onKeyPress={this.inputKeyPress}
             />
             <button
               className={`loginBtn ${
-                this.state.idValue.includes('@') &&
-                this.state.pwValue.length >= 5
+                this.state.email.includes('@') &&
+                this.state.password.length >= 5
                   ? 'button-on'
                   : ''
               }`}
-              onClick={this.goToMain}
+              onClick={(this.inputKeyPress, this.goToMain)}
+              value="button"
+              //이거 왜 메인으로 안가져?
             >
               로그인
             </button>
