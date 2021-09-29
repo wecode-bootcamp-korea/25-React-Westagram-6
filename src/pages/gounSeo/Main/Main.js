@@ -1,15 +1,27 @@
 import React from 'react';
 import './Main.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faCompass, faUser } from '@fortawesome/free-regular-svg-icons';
 
 class MainGoUn extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { reply: '' };
   }
+
+  handlereplyInput = event => {
+    this.setState({ reply: event.target.value });
+  };
+
+  buttonClick = () => {
+    let arr = this.state.reply;
+    arr = arr.concat({ text: this.state.reply });
+    this.setState({ reply: '', replies: arr });
+  };
+  enterClick = event => {
+    if (event.key === 'Enter') {
+      this.buttonClick;
+      event.target.value = '';
+    }
+  };
 
   render() {
     return (
@@ -52,16 +64,20 @@ class MainGoUn extends React.Component {
             <span className="likeSentence">
               aineworld 님 외 10명이 좋아합니다
             </span>
-            <div className="reply">
-              canon_mj 베이킹 클래스 즐거웠어~ <br />
-              cocoadidi 다음에 또 같이 하자 <br />
-            </div>
+            <ul className="reply">
+              <li>canon_mj 베이킹 클래스 즐거웠어~ </li>
+              <li>cocoadidi 다음에 또 같이 하자 </li>
+              <MainGoUn commentList={this.state.reply} />
+            </ul>
             <span className="timeInfo">42분 전 </span>
           </article>
 
           <div className="replyBlank">
-            <dl>댓글 달기... </dl>
-            <dl>게시 </dl>
+            <input
+              onChange={this.handlereplyInput}
+              placeholder="댓글 달기..."
+            />
+            <button onClick={this.handlereplyInput}>게시 </button>
           </div>
         </div>
 
@@ -125,7 +141,7 @@ class MainGoUn extends React.Component {
             instagram정보.지원. 홍보 센터 채용 정보 .<br />
             개인정보처리방침.약관
             <br />
-            디렉터리.프로필.해쉬태그.언어{' '}
+            디렉터리.프로필.해쉬태그.언어
           </dl>
           <dl>2019 INSTAGRAM </dl>
         </div>

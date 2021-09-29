@@ -32,7 +32,7 @@
     margin: 7px;
   }
 
-  .btnLogin {
+  button {
     width: 260px;
     height: 40px;
     display: block;
@@ -48,6 +48,12 @@
     left: 43px;
   }
 
+  .changeButtonColor {
+    background-color: rgb(37, 122, 192);
+  }
+  .normalButtonColor {
+    background-color: rgb(139, 186, 218);
+  }
   .btnForgot {
     color: rgb(43, 86, 130);
     font-weight: bold;
