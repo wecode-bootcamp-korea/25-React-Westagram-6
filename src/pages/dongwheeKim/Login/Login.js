@@ -1,9 +1,17 @@
-import { faRubleSign } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Login.scss';
 
 class LoginDongWhee extends React.Component {
   goToMain = () => {
+    fetch('http://10.58.5.59:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.textId,
+        password: this.state.textPw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
     this.props.history.push('/main-whee');
   };
 
@@ -29,25 +37,6 @@ class LoginDongWhee extends React.Component {
   };
 
   toggleLoginButton = () => {
-    // if (this.state.loginButtonColor) {
-    //   this.setState({
-    //     loginButtonColor: false,
-    //   });
-    // } else {
-    //   this.setState({
-    //     loginButtonColor: true,
-    //   });
-    // }
-
-    //   this.setState({
-    //     loginButtonColor: this.state.loginButtonColor ? false : true,
-    //   });
-    // };
-
-    // this.setState({
-    //   loginButtonColor: !this.state.loginButtonColor,
-    // });
-
     if (this.state.textId.includes('@') && this.state.textPw.length > 4) {
       this.setState({
         loginButtonColor: true,

@@ -1,5 +1,7 @@
 import React from 'react';
 import Nav from '../../../components/Nav/Nav';
+import INFO_LIST from './infoList';
+import PROFILE_LIST from './profileList';
 import './Main.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
@@ -119,123 +121,31 @@ class MainDongWhee extends React.Component {
                     <span className="recommend">회원님을 위한 추천</span>
                     <span className="viewAll">모두 보기</span>
                   </p>
-                  <div className="profile">
-                    <div className="profilePhoto one"></div>
-                    <div className="profileWrap">
-                      <div className="recName">apple</div>
-                      <div className="recDesc">
-                        litandls님 외 896명이 팔로우합니다
-                      </div>
-                      <div className="follow">팔로우</div>
-                    </div>
-                  </div>
 
-                  <div className="profile">
-                    <div className="profilePhoto two"></div>
-                    <div className="profileWrap">
-                      <div className="recName">lvmh</div>
-                      <div className="recDesc">
-                        aodlqid님 외 346명이 팔로우합니다
+                  {PROFILE_LIST.map(profile => {
+                    return (
+                      <div key={profile.id} className="profile">
+                        <div className={profile.className}></div>
+                        <div className="profileWrap">
+                          <div className="recName">{profile.name}</div>
+                          <div className="recDesc">{profile.followers}</div>
+                          <div className="follow">팔로우</div>
+                        </div>
                       </div>
-                      <div className="follow">팔로우</div>
-                    </div>
-                  </div>
-
-                  <div className="profile">
-                    <div className="profilePhoto three"></div>
-                    <div className="profileWrap">
-                      <div className="recName">toss.im</div>
-                      <div className="recDesc">
-                        gkfiwl님 외 108명이 팔로우합니다
-                      </div>
-                      <div className="follow">팔로우</div>
-                    </div>
-                  </div>
-
-                  <div className="profile">
-                    <div className="profilePhoto four"></div>
-                    <div className="profileWrap">
-                      <div className="recName">kakao</div>
-                      <div className="recDesc">
-                        vkffkg55님 외 247명이 팔로우합니다
-                      </div>
-                      <div className="follow">팔로우</div>
-                    </div>
-                  </div>
-
-                  <div className="profile">
-                    <div className="profilePhoto five"></div>
-                    <div className="profileWrap">
-                      <div className="recName">mdn</div>
-                      <div className="recDesc">
-                        islka님 외 1,357명이 팔로우합니다
-                      </div>
-                      <div className="follow">팔로우</div>
-                    </div>
-                  </div>
+                    );
+                  })}
 
                   <div className="explainSite">
                     <ul>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          도움말
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          소개
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          홍보
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          센터
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          API
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          채용 정보
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          개인정보처리방침
-                        </a>
-                      </li>
-                      <li className="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          약관
-                        </a>
-                      </li>
-                      <li class="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          위치
-                        </a>
-                      </li>
-                      <li class="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          인기 계정
-                        </a>
-                      </li>
-                      <li class="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          해시태그
-                        </a>
-                      </li>
-                      <li class="explain">
-                        <a href="http://instagram.com" target="_blank">
-                          언어
-                        </a>
-                      </li>
+                      {INFO_LIST.map(listData => {
+                        return (
+                          <li key={listData.id} className="moreInfo">
+                            <a href={listData.link} target=" _blank">
+                              {listData.content}
+                            </a>
+                          </li>
+                        );
+                      })}
                     </ul>
                     <span>© 2021 WESTAGRAM FROM WECODE 25th</span>
                   </div>
