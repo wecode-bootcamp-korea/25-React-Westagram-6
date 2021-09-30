@@ -1,26 +1,21 @@
 import React from 'react';
 import './Main.scss';
-
+import Comment from './Comment/Comment';
 class MainGoUn extends React.Component {
   constructor() {
     super();
-    this.state = { reply: '' };
+    this.state = {
+      reply: '',
+      commentBox: [],
+      commentArr: [
+        { id: 'canon_mj', text: '베이킹 클래스 즐거웠어~' },
+        { id: 'cocoadidi', text: '다음에 또 같이 하자' },
+      ],
+    };
   }
 
   handlereplyInput = event => {
     this.setState({ reply: event.target.value });
-  };
-
-  buttonClick = () => {
-    let arr = this.state.reply;
-    arr = arr.concat({ text: this.state.reply });
-    this.setState({ reply: '', replies: arr });
-  };
-  enterClick = event => {
-    if (event.key === 'Enter') {
-      this.buttonClick;
-      event.target.value = '';
-    }
   };
 
   render() {
@@ -65,9 +60,9 @@ class MainGoUn extends React.Component {
               aineworld 님 외 10명이 좋아합니다
             </span>
             <ul className="reply">
-              <li>canon_mj 베이킹 클래스 즐거웠어~ </li>
-              <li>cocoadidi 다음에 또 같이 하자 </li>
-              <MainGoUn commentList={this.state.reply} />
+              {this.state.commentArr.map(i => (
+                <Comment commentId={i.id} commentText={i.text} />
+              ))}
             </ul>
             <span className="timeInfo">42분 전 </span>
           </article>
@@ -75,6 +70,7 @@ class MainGoUn extends React.Component {
           <div className="replyBlank">
             <input
               onChange={this.handlereplyInput}
+              onkeyPress={this.enterClick}
               placeholder="댓글 달기..."
             />
             <button onClick={this.handlereplyInput}>게시 </button>
