@@ -17,7 +17,14 @@ class MainGoUn extends React.Component {
   handlereplyInput = event => {
     this.setState({ reply: event.target.value });
   };
-
+  clickButton = () => {
+    this.setState({
+      commentArr: this.state.commentArr.concat({
+        id: 'anna',
+        text: this.state.reply,
+      }),
+    });
+  };
   render() {
     return (
       <main className="mainGoun">
@@ -60,8 +67,8 @@ class MainGoUn extends React.Component {
               aineworld 님 외 10명이 좋아합니다
             </span>
             <ul className="reply">
-              {this.state.commentArr.map(i => (
-                <Comment commentId={i.id} commentText={i.text} />
+              {this.state.commentArr.map((i, index) => (
+                <Comment key={index} commentId={i.id} commentText={i.text} />
               ))}
             </ul>
             <span className="timeInfo">42분 전 </span>
@@ -73,7 +80,7 @@ class MainGoUn extends React.Component {
               onkeyPress={this.enterClick}
               placeholder="댓글 달기..."
             />
-            <button onClick={this.handlereplyInput}>게시 </button>
+            <button onClick={this.clickButton}>게시 </button>
           </div>
         </div>
 
