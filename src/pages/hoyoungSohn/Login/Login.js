@@ -6,6 +6,7 @@ class LoginHoYoung extends React.Component {
   constructor() {
     super();
     this.state = {
+<<<<<<< HEAD
       email: '',
       password: '',
     };
@@ -50,6 +51,22 @@ class LoginHoYoung extends React.Component {
     const btnChange =
       this.state.email.includes('@') && this.state.password.length >= 5;
 
+=======
+      titleColor: 'b9dffc',
+      value: 'a',
+    };
+  }
+
+  changeColor = () => {
+    this.setState({
+      titleColor: 'blue',
+    });
+  };
+
+  render() {
+    let inpp = document.getElementsByTagName('input')[0];
+    console.log(document.getElementsByClassName('loginBtn'));
+>>>>>>> a8111606968a9cf083c5e0488a133d5d58e683e7
     return (
       <>
         <div className="LoginHoYoung">
@@ -59,6 +76,7 @@ class LoginHoYoung extends React.Component {
               type="text"
               name="id"
               placeholder="전화번호, 사용자 이름 또는 이메일"
+<<<<<<< HEAD
               onChange={this.handleIdInput}
             />
             <input
@@ -72,6 +90,16 @@ class LoginHoYoung extends React.Component {
               className={`loginBtn ${btnChange ? 'button-on' : ''}`}
               onClick={(this.inputKeyPress, this.goToMain)}
               value="button"
+=======
+              onInput={this.state.value}
+            />
+            <input type="password" name="password" placeholder="비밀번호" />
+            {/* <Link to = './Main'><button className ='loginBtn'>로그인</button></Link> */}
+            <button
+              className="loginBtn"
+              style={{ backgroundColor: this.state.titleColor }}
+              onInput={this.changeColor}
+>>>>>>> a8111606968a9cf083c5e0488a133d5d58e683e7
             >
               로그인
             </button>
