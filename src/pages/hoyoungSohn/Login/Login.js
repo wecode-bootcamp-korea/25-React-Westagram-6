@@ -36,13 +36,9 @@ class LoginHoYoung extends React.Component {
     });
   };
 
-  btnClick = () => {
-    console.log(`id는 : ${this.state.email} pw는 : ${this.state.password}`);
-  };
-
   inputKeyPress = e => {
     if (e.key === 'Enter') {
-      this.btnClick();
+      this.goToMain();
     }
   };
 
