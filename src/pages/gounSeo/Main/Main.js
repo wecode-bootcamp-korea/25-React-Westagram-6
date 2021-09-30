@@ -6,7 +6,6 @@ class MainGoUn extends React.Component {
     super();
     this.state = {
       reply: '',
-      commentBox: [],
       commentArr: [
         { id: 'canon_mj', text: '베이킹 클래스 즐거웠어~' },
         { id: 'cocoadidi', text: '다음에 또 같이 하자' },
@@ -17,6 +16,7 @@ class MainGoUn extends React.Component {
   handlereplyInput = event => {
     this.setState({ reply: event.target.value });
   };
+
   clickButton = () => {
     this.setState({
       commentArr: this.state.commentArr.concat({
@@ -24,6 +24,17 @@ class MainGoUn extends React.Component {
         text: this.state.reply,
       }),
     });
+    this.resetEnter();
+  };
+
+  enterClick = e => {
+    if (e.key === 'Enter') {
+      this.clickButton();
+    }
+  };
+
+  resetEnter = () => {
+    this.setState({ reply: '' });
   };
   render() {
     return (
@@ -77,7 +88,8 @@ class MainGoUn extends React.Component {
           <div className="replyBlank">
             <input
               onChange={this.handlereplyInput}
-              onkeyPress={this.enterClick}
+              onKeyPress={this.enterClick}
+              value={this.state.reply}
               placeholder="댓글 달기..."
             />
             <button onClick={this.clickButton}>게시 </button>
