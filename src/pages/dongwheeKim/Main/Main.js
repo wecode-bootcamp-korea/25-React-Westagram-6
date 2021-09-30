@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../../../components/Nav/Nav';
 import INFO_LIST from './infoList';
 import PROFILE_LIST from './profileList';
+import Comment from './Comment';
 import './Main.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
@@ -37,6 +38,7 @@ class MainDongWhee extends React.Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <>
         <span className="MainDongWhee">
@@ -66,7 +68,7 @@ class MainDongWhee extends React.Component {
                     <div className="firstLikePerson"></div>
                     <div className="secondLikePerson"></div>
                     <div className="howManyLikes">
-                      whatsappguys님 외 3,110,979명이 좋아합니다
+                      dongwheekeem님 외 3,110,979명이 좋아합니다
                     </div>
                   </section>
                   <section className="feed">
@@ -81,8 +83,8 @@ class MainDongWhee extends React.Component {
                       <span className="feedComment">
                         What a stunning view !!!
                       </span>
-                      {this.state.commentList.map((comment, idx) => {
-                        return <li key={idx}> {comment} </li>;
+                      {this.state.commentList.map(comment => {
+                        return <Comment commentList={comment} />;
                       })}
                     </div>
                   </ul>
