@@ -7,19 +7,6 @@ import Feed from './Feed/Feed';
 import Footer from './Footer/Footer';
 
 class MainHoYoung extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      repl: '',
-    };
-  }
-
-  replChange = e => {
-    this.setState({
-      repl: e.target.value,
-    });
-  };
-
   render() {
     return (
       <>

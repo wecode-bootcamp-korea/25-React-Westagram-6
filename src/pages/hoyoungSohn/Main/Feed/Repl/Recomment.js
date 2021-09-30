@@ -9,8 +9,8 @@ class Recomment extends React.Component {
           {this.props.commentList.map(data => {
             return (
               <li>
-                <span className="bold">tthorri___</span>
-                {data}
+                <span>tthorri___</span>
+                <span className="bold">{data}</span>
               </li>
             );
           })}
