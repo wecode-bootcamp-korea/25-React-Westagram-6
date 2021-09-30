@@ -1,3 +1,4 @@
+// import { font } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Repl from './Repl/Repl';
@@ -6,22 +7,29 @@ class Feed extends React.Component {
   constructor() {
     super();
     this.state = {
-      replContents: '',
-      color: 'red',
-      contents: [],
+      commentInput: '',
+      commentList: [],
     };
   }
 
-  onChange = e => {
+  handleCommentInput = e => {
     this.setState({
-      replContents: e.target.value,
+      commentInput: e.target.value,
     });
   };
 
-  uploadRepl = repl => {
+  addCommentClick = () => {
+    const { commentInput, commentList } = this.state;
     this.setState({
-      reply: this.state.contents.concat(repl),
+      commentList: commentList.concat(commentInput),
+      commentInput: '',
     });
+  };
+
+  btnEnter = e => {
+    if (e.key === 'Enter') {
+      this.addCommentClick();
+    }
   };
 
   render() {
@@ -74,9 +82,11 @@ class Feed extends React.Component {
         </div>
 
         <Repl
-          color={this.state.color}
-          onChange={this.onChange}
-          value={this.uploadRepl}
+          handleCommentInput={this.handleCommentInput}
+          commentInput={this.state.commentInput}
+          addCommentClick={this.addCommentClick}
+          commentList={this.state.commentList}
+          btnEnter={this.btnEnter}
         />
       </article>
     );

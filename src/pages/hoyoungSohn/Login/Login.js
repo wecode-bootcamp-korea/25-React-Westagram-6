@@ -13,15 +13,15 @@ class LoginHoYoung extends React.Component {
 
   goToMain = () => {
     this.props.history.push('/main-young');
-    fetch('http://10.58.3.77:8000/user_login/', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password,
-      }),
-    })
-      .then(response => response.json())
-      .then(result => console.log('결과: ', result));
+    // fetch('http://10.58.3.77:8000/user_login/', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: this.state.email,
+    //     password: this.state.password,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => console.log('결과: ', result));
   };
 
   handleIdInput = e => {
@@ -47,6 +47,9 @@ class LoginHoYoung extends React.Component {
   };
 
   render() {
+    const btnChange =
+      this.state.email.includes('@') && this.state.password.length >= 5;
+
     return (
       <>
         <div className="LoginHoYoung">
@@ -66,15 +69,9 @@ class LoginHoYoung extends React.Component {
               onKeyPress={this.inputKeyPress}
             />
             <button
-              className={`loginBtn ${
-                this.state.email.includes('@') &&
-                this.state.password.length >= 5
-                  ? 'button-on'
-                  : ''
-              }`}
+              className={`loginBtn ${btnChange ? 'button-on' : ''}`}
               onClick={(this.inputKeyPress, this.goToMain)}
               value="button"
-              //이거 왜 메인으로 안가져?
             >
               로그인
             </button>
