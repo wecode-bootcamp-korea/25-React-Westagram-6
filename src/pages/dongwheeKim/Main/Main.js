@@ -83,8 +83,8 @@ class MainDongWhee extends React.Component {
                       <span className="feedComment">
                         What a stunning view !!!
                       </span>
-                      {this.state.commentList.map(comment => {
-                        return <Comment commentList={comment} />;
+                      {this.state.commentList.map((comment, i) => {
+                        return <Comment commentList={comment} key={i} />;
                       })}
                     </div>
                   </ul>
