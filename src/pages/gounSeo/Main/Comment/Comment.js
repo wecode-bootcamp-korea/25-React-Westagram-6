@@ -3,9 +3,11 @@ import './Comment.scss';
 
 class Comment extends React.Component {
   render() {
+    const { commentId, commentText } = this.props;
+
     return (
       <li>
-        {this.props.commentId} {this.props.commentText}
+        {commentId} {commentText}
       </li>
     );
   }
