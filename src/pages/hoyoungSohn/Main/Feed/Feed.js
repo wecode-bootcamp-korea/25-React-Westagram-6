@@ -21,13 +21,15 @@ class Feed extends React.Component {
 
   addCommentClick = () => {
     const { commentInput, commentList } = this.state;
-    this.setState({
-      commentList: commentList.concat({
-        userName: 'tthhorii___',
-        content: this.state.commentInput,
-      }),
-      commentInput: '',
-    });
+    if (commentInput.trim() !== '') {
+      this.setState({
+        commentList: commentList.concat({
+          userName: 'tthhorii___',
+          content: this.state.commentInput,
+        }),
+        commentInput: '',
+      });
+    }
   };
 
   btnEnter = e => {
@@ -37,7 +39,6 @@ class Feed extends React.Component {
   };
 
   render() {
-    console.log(this.state.commentList);
     return (
       <article>
         <header>

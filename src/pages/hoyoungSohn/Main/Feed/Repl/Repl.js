@@ -4,7 +4,6 @@ import Recomment from './Recomment';
 
 class Repl extends React.Component {
   render() {
-    console.log(this.props.commentList);
     const {
       handleCommentInput,
       commentInput,
