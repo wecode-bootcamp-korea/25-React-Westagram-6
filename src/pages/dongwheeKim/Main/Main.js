@@ -38,7 +38,6 @@ class MainDongWhee extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <>
         <span className="MainDongWhee">
