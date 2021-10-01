@@ -9,7 +9,7 @@ class Nav extends React.Component {
           <img
             className="mainLogoPng"
             src="/images/common/instagram.png"
-            alt="Main Logo Image"
+            alt="Main Logo"
           />
           <span className="mainLogo">Westagram</span>
         </span>

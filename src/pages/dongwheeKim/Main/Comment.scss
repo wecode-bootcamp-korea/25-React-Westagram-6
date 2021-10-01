@@ -1,0 +1,13 @@
+.commentList {
+  a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
