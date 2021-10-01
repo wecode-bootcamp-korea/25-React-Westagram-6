@@ -3,6 +3,10 @@ import React from 'react';
 import './Login.scss';
 
 class LoginGoUn extends React.Component {
+  constructor() {
+    super();
+    this.state = { id: '', pw: '' };
+  }
   goToMain = () => {
     this.props.history.push('/main-un');
     /* fetch('http://10.58.1.9:8000/users/signin/', {
@@ -18,22 +22,17 @@ class LoginGoUn extends React.Component {
       .then(result => console.log('결과: ', result));*/
   };
 
-  constructor() {
-    super();
-    this.state = { Id: '', Pw: '' };
-  }
-
   handleIdInput = event => {
-    this.setState({ Id: event.target.value });
+    this.setState({ id: event.target.value });
   };
 
   handlePwInput = event => {
-    this.setState({ Pw: event.target.value });
+    this.setState({ pw: event.target.value });
   };
 
   render() {
     const isValid =
-      this.state.Id.indexOf('@') !== -1 && this.state.Pw.length >= 5;
+      this.state.id.indexOf('@') !== -1 && this.state.pw.length >= 5;
 
     return (
       <div className="allBox">
@@ -42,7 +41,6 @@ class LoginGoUn extends React.Component {
           <input
             onChange={this.handleIdInput}
             className="myInfo"
-            type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <input

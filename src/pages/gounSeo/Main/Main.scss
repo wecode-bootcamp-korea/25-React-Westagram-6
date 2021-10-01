@@ -1,11 +1,11 @@
 .mainGoun {
   .feeds {
-    width: 600px;
-    height: 900px;
-    border: 1px solid rgb(209, 208, 208);
     position: relative;
     top: 50px;
     left: 250px;
+    width: 600px;
+    height: 900px;
+    border: 1px solid rgb(209, 208, 208);
 
     article {
       .topBar {
@@ -15,12 +15,12 @@
         font-weight: bold;
 
         img {
-          width: 32px;
-          height: 32px;
-          border-radius: 20px;
           position: relative;
           top: 10px;
           left: 10px;
+          width: 32px;
+          height: 32px;
+          border-radius: 20px;
         }
 
         span {
@@ -35,9 +35,9 @@
       }
 
       .middleBar {
-        list-style: none;
         display: flex;
         flex-direction: row;
+        list-style: none;
 
         .likeBtn {
           position: relative;
@@ -77,9 +77,9 @@
       }
 
       .timeInfo {
-        color: rgb(173, 170, 170);
         position: relative;
         left: 15px;
+        color: rgb(173, 170, 170);
       }
     }
 
@@ -95,12 +95,12 @@
   }
 
   .wecodephoto {
-    width: 32px;
-    height: 32px;
-    border-radius: 20px;
     position: relative;
     left: 950px;
     bottom: 845px;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
   }
 
   .group {
@@ -211,10 +211,10 @@
     }
 
     dt {
-      font-weight: bold;
       position: relative;
       left: 20px;
       top: 20px;
+      font-weight: bold;
     }
 
     dd {
@@ -234,6 +234,7 @@
       top: -25px;
       left: 50px;
     }
+
     .user6 {
       position: relative;
       top: -25px;

@@ -1,6 +1,8 @@
 import React from 'react';
-import './Main.scss';
 import Comment from './Comment/Comment';
+
+import './Main.scss';
+
 class MainGoUn extends React.Component {
   constructor() {
     super();
@@ -13,29 +15,26 @@ class MainGoUn extends React.Component {
     };
   }
 
-  handlereplyInput = event => {
+  handleReplyInput = event => {
     this.setState({ reply: event.target.value });
   };
 
-  clickButton = () => {
+  addComment = () => {
     this.setState({
       commentArr: this.state.commentArr.concat({
         id: 'anna',
         text: this.state.reply,
       }),
+      reply: '',
     });
-    this.resetEnter();
   };
 
-  enterClick = e => {
+  insertComment = e => {
     if (e.key === 'Enter') {
-      this.clickButton();
+      this.addComment();
     }
   };
 
-  resetEnter = () => {
-    this.setState({ reply: '' });
-  };
   render() {
     return (
       <main className="mainGoun">
@@ -78,8 +77,12 @@ class MainGoUn extends React.Component {
               aineworld 님 외 10명이 좋아합니다
             </span>
             <ul className="reply">
-              {this.state.commentArr.map((i, index) => (
-                <Comment key={index} commentId={i.id} commentText={i.text} />
+              {this.state.commentArr.map((com, index) => (
+                <Comment
+                  key={index}
+                  commentId={com.id}
+                  commentText={com.text}
+                />
               ))}
             </ul>
             <span className="timeInfo">42분 전 </span>
@@ -87,12 +90,12 @@ class MainGoUn extends React.Component {
 
           <div className="replyBlank">
             <input
-              onChange={this.handlereplyInput}
-              onKeyPress={this.enterClick}
+              onChange={this.handleReplyInput}
+              onKeyPress={this.insertComment}
               value={this.state.reply}
               placeholder="댓글 달기..."
             />
-            <button onClick={this.clickButton}>게시 </button>
+            <button onClick={this.addComment}>게시 </button>
           </div>
         </div>
 
