@@ -1,1 +1,251 @@
-// a
+.mainGoun {
+  .feeds {
+    position: relative;
+    top: 50px;
+    left: 250px;
+    width: 600px;
+    height: 900px;
+    border: 1px solid rgb(209, 208, 208);
+
+    article {
+      .topBar {
+        width: 600px;
+        height: 60px;
+        border: 1px solid rgb(209, 208, 208);
+        font-weight: bold;
+
+        img {
+          position: relative;
+          top: 10px;
+          left: 10px;
+          width: 32px;
+          height: 32px;
+          border-radius: 20px;
+        }
+
+        span {
+          position: relative;
+          left: 30px;
+        }
+      }
+
+      .mainPhoto {
+        width: 600px;
+        height: 600px;
+      }
+
+      .middleBar {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+
+        .likeBtn {
+          position: relative;
+          right: 30px;
+        }
+
+        .fa-comment {
+          position: relative;
+          right: 15px;
+        }
+
+        .fa-bookmark {
+          position: relative;
+          left: 480px;
+        }
+      }
+
+      .replyPhoto {
+        position: relative;
+        left: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 20px;
+      }
+
+      .likeSentence {
+        position: relative;
+        top: -5px;
+        left: 8px;
+        font-weight: bold;
+      }
+
+      .reply {
+        position: relative;
+        left: 15px;
+        font-weight: bold;
+      }
+
+      .timeInfo {
+        position: relative;
+        left: 15px;
+        color: rgb(173, 170, 170);
+      }
+    }
+
+    .replyBlank {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 54px;
+      border: 1px solid rgb(209, 208, 208);
+      border-bottom: hidden;
+      margin-top: 20px;
+    }
+  }
+
+  .wecodephoto {
+    position: relative;
+    left: 950px;
+    bottom: 845px;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+  }
+
+  .group {
+    position: relative;
+    left: 960px;
+    bottom: 850px;
+    font-weight: bold;
+  }
+
+  .storylist {
+    position: relative;
+    left: 930px;
+    bottom: 820px;
+    width: 325px;
+    height: 290px;
+    border: 1px solid rgb(209, 208, 208);
+
+    .storyHeader {
+      color: gray;
+      font-weight: bold;
+    }
+
+    .allView {
+      position: relative;
+      left: 230px;
+      bottom: 35px;
+      font-weight: bold;
+    }
+
+    .nameList {
+      position: relative;
+      bottom: 40px;
+
+      .storyPhoto {
+        position: relative;
+        left: 10px;
+        width: 34px;
+        height: 34px;
+        border-radius: 20px;
+      }
+
+      .user1 {
+        position: relative;
+        left: 50px;
+        bottom: 60px;
+        font-weight: bold;
+      }
+
+      .user2 {
+        position: relative;
+        left: 50px;
+        bottom: 60px;
+        font-weight: bold;
+      }
+
+      .user3 {
+        position: relative;
+        left: 50px;
+        bottom: 60px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .recomandList {
+    position: relative;
+    left: 930px;
+    bottom: 800px;
+    width: 325px;
+    height: 290px;
+    border: 1px solid rgb(209, 208, 208);
+
+    .thirdBox {
+      position: relative;
+      top: 10px;
+      color: gray;
+    }
+
+    .allView1 {
+      position: relative;
+      left: 230px;
+      top: -10px;
+      font-weight: bold;
+    }
+
+    .listPhoto1 {
+      position: relative;
+      left: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 20px;
+    }
+
+    .listPhoto2 {
+      position: relative;
+      left: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 20px;
+    }
+
+    .listPhoto3 {
+      position: relative;
+      left: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 20px;
+    }
+
+    dt {
+      position: relative;
+      left: 20px;
+      top: 20px;
+      font-weight: bold;
+    }
+
+    dd {
+      position: relative;
+      left: 20px;
+      top: -5px;
+    }
+
+    .user4 {
+      position: relative;
+      top: -25px;
+      left: 50px;
+    }
+
+    .user5 {
+      position: relative;
+      top: -25px;
+      left: 50px;
+    }
+
+    .user6 {
+      position: relative;
+      top: -25px;
+      left: 50px;
+    }
+  }
+
+  .footInfo {
+    position: relative;
+    left: 930px;
+    bottom: 800px;
+    color: rgb(177, 175, 175);
+  }
+}
