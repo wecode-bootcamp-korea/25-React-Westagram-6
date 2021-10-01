@@ -4,6 +4,7 @@ import Recomment from './Recomment';
 
 class Repl extends React.Component {
   render() {
+    console.log(this.props.commentList);
     const {
       handleCommentInput,
       commentInput,
@@ -15,11 +16,13 @@ class Repl extends React.Component {
     return (
       <>
         <ul className="reply">
-          <li>
-            <span>tthorri___</span>
-            <span className="bold">꽁무니 빼고 도망가는중</span>
-          </li>
-          <Recomment commentList={this.props.commentList} />
+          {commentList.map((data, index) => (
+            <Recomment
+              key={index}
+              userName={data.userName}
+              content={data.content}
+            />
+          ))}
         </ul>
         <article>
           <div className="repl">

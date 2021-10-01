@@ -1,19 +1,13 @@
 import React from 'react';
-import COMMENT_LIST from './commentData';
 
 class Recomment extends React.Component {
   render() {
+    console.log(this.props.content);
     return (
-      <ul>
-        {this.props.commentList.map((data, index) => {
-          return (
-            <li key={index}>
-              <span>tthorri___</span>
-              <span className="bold">{data}</span>
-            </li>
-          );
-        })}
-      </ul>
+      <li>
+        <span>{this.props.userName}</span>
+        <span className="bold">{this.props.content}</span>
+      </li>
     );
   }
 }

@@ -1,5 +1,6 @@
 // import { font } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
+import COMMENT_LIST from './Repl/commentData';
 import { Link } from 'react-router-dom';
 import Repl from './Repl/Repl';
 
@@ -8,7 +9,7 @@ class Feed extends React.Component {
     super();
     this.state = {
       commentInput: '',
-      commentList: [],
+      commentList: COMMENT_LIST,
     };
   }
 
@@ -21,7 +22,10 @@ class Feed extends React.Component {
   addCommentClick = () => {
     const { commentInput, commentList } = this.state;
     this.setState({
-      commentList: commentList.concat(commentInput),
+      commentList: commentList.concat({
+        userName: 'tthhorii___',
+        content: this.state.commentInput,
+      }),
       commentInput: '',
     });
   };
@@ -33,6 +37,7 @@ class Feed extends React.Component {
   };
 
   render() {
+    console.log(this.state.commentList);
     return (
       <article>
         <header>
