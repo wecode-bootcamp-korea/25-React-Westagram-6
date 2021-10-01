@@ -36,7 +36,7 @@ class Feed extends React.Component {
     return (
       <article>
         <header>
-          <div className="user-info">
+          <div className="userInfo">
             <Link to="">
               <img alt="myface" src="images/hoyoungSohn/Main/zoomprofile.Png" />
             </Link>
@@ -55,7 +55,7 @@ class Feed extends React.Component {
         />
 
         <div className="feeding">
-          <div className="like-icon">
+          <div className="likeIcon">
             <div>
               <button>
                 <i className="far fa-heart"></i>
@@ -73,7 +73,7 @@ class Feed extends React.Component {
               </button>
             </div>
           </div>
-          <div className="friend-info">
+          <div className="friendInfo">
             <Link to="">
               <img src="images/hoyoungSohn/main/photo__.jpg" alt="dog" />
             </Link>

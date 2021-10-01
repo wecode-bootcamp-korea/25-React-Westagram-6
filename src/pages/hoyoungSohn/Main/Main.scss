@@ -1,4 +1,4 @@
-.MainHoYoung {
+.mainHoYoung {
   display: flex;
   justify-content: center;
 
@@ -15,7 +15,7 @@
         justify-content: space-between;
         margin-top: 10px;
 
-        .user-info {
+        .userInfo {
           display: flex;
           align-items: center;
 
@@ -37,7 +37,7 @@
         margin-top: 15px;
       }
 
-      .friend-info {
+      .friendInfo {
         display: flex;
         align-items: center;
         margin-top: 3px;
@@ -66,13 +66,13 @@
           border: 0px;
         }
 
-        .upload-button {
+        .uploadButton {
           width: 50px;
           border: 0;
           color: #b9dffc;
           background-color: white;
 
-          &.button-on {
+          &.buttonOn {
             color: #108dec;
           }
         }
@@ -80,7 +80,7 @@
     }
   }
 
-  .like-icon {
+  .likeIcon {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,11 +115,11 @@
     }
   }
 
-  .main-right {
+  .mainRight {
     margin-left: 30px;
     margin-top: 60px;
 
-    .right-header {
+    .rightHeader {
       display: flex;
       align-items: center;
 
@@ -128,7 +128,7 @@
         border-radius: 30px;
       }
 
-      .header-user {
+      .headerUser {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -137,16 +137,16 @@
   }
 }
 
-.header-user span {
+.headerUser span {
   font-size: 13px;
   margin-left: 10px;
 }
 
-.header-user a {
+.headerUser a {
   text-decoration: none;
 }
 
-.right-center {
+.rightCenter {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
@@ -154,7 +154,7 @@
   border: 1px solid rgb(230, 230, 230);
 }
 
-.center-story {
+.centerStory {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
@@ -163,7 +163,7 @@
   font-size: 14px;
 }
 
-.story-picture01 {
+.storyPicture01 {
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -171,36 +171,36 @@
   margin-bottom: 10px;
 }
 
-.story-picture02 {
+.storyPicture02 {
   display: flex;
   margin-left: 15px;
   margin-bottom: 10px;
 }
 
-.story-picture03 {
+.storyPicture03 {
   display: flex;
   margin-left: 15px;
   margin-bottom: 10px;
 }
 
-.story-picture01 > img {
+.storyPicture01 > img {
   width: 30px;
   height: 30px;
   border-radius: 30px;
 }
 
-.story-picture02 > img {
+.storyPicture02 > img {
   width: 30px;
   height: 30px;
   border-radius: 30px;
 }
 
-.story-picture03 > img {
+.storyPicture03 > img {
   width: 30px;
   height: 30px;
   border-radius: 30px;
 }
 
-.story-picture span {
+.storyPicture span {
   margin-left: 14px;
 }

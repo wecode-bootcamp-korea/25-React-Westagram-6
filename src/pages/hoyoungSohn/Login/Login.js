@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss';
 
-class LoginHoYoung extends React.Component {
+class loginHoyoung extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -24,50 +24,43 @@ class LoginHoYoung extends React.Component {
     //   .then(result => console.log('결과: ', result));
   };
 
-  handleIdInput = e => {
+  handleInput = e => {
     this.setState({
-      email: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
-  handlePwInput = e => {
-    this.setState({
-      password: e.target.value,
-    });
-  };
-
-  inputKeyPress = e => {
+  inputEnterPress = e => {
     if (e.key === 'Enter') {
       this.goToMain();
     }
   };
 
   render() {
-    const btnChange =
+    const isBtnColorChange =
       this.state.email.includes('@') && this.state.password.length >= 5;
 
     return (
       <>
-        <div className="LoginHoYoung">
+        <div className="loginHoYoung">
           <h1>Westagram</h1>
-          <form className="login-form">
+          <form className="loginForm">
             <input
-              type="text"
-              name="id"
+              name="email"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={this.handleIdInput}
+              onChange={this.handleInput}
             />
             <input
               type="password"
               name="password"
               placeholder="비밀번호"
-              onChange={this.handlePwInput}
-              onKeyPress={this.inputKeyPress}
+              onChange={this.handleInput}
+              onKeyPress={this.inputEnterPress}
             />
             <button
-              className={`loginBtn ${btnChange ? 'button-on' : ''}`}
-              onClick={(this.inputKeyPress, this.goToMain)}
-              value="button"
+              type="button"
+              className={`loginBtn ${isBtnColorChange ? 'buttonOn' : ''}`}
+              onClick={this.goToMain}
             >
               로그인
             </button>
@@ -79,4 +72,4 @@ class LoginHoYoung extends React.Component {
   }
 }
 
-export default LoginHoYoung;
+export default loginHoyoung;

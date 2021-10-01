@@ -1,4 +1,4 @@
-.LoginHoYoung {
+.loginHoYoung {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@
     margin-top: 70px;
   }
 
-  .login-form {
+  .loginForm {
     display: flex;
     flex-direction: column;
     margin: 40px;
@@ -42,7 +42,7 @@
       border-radius: 5px;
       border: 0;
 
-      &.button-on {
+      &.buttonOn {
         background-color: #108dec;
 
         &:hover {

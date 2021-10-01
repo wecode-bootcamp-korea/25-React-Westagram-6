@@ -10,8 +10,8 @@ import LoginGoUn from './pages/gounSeo/Login/Login';
 import MainGoUn from './pages/gounSeo/Main/Main';
 
 /* Hoyoung */
-import LoginHoYoung from './pages/hoyoungSohn/Login/Login';
-import MainHoYoung from './pages/hoyoungSohn/Main/Main';
+import loginHoYoung from './pages/hoyoungSohn/Login/Login';
+import mainHoYoung from './pages/hoyoungSohn/Main/Main';
 
 /* Hoyoung */
 import LoginSueYeon from './pages/sueyeonYoon/Login/Login';
@@ -26,8 +26,8 @@ class Routes extends Component {
           <Route exact path="/main-whee" component={MainDongWhee} />
           <Route exact path="/login-un" component={LoginGoUn} />
           <Route exact path="/main-un" component={MainGoUn} />
-          <Route exact path="/login-young" component={LoginHoYoung} />
-          <Route exact path="/main-young" component={MainHoYoung} />
+          <Route exact path="/login-young" component={loginHoYoung} />
+          <Route exact path="/main-young" component={mainHoYoung} />
           <Route exact path="/login-yeon" component={LoginSueYeon} />
           <Route exact path="/main-yeon" component={MainSueYeon} />
         </Switch>

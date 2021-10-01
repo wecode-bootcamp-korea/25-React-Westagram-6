@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom';
 import Recomment from './Recomment';
 
 class Repl extends React.Component {
-  colorChange = () => {
-    this.setState({
-      color: '#108dec',
-    });
-  };
-
   render() {
     const {
       handleCommentInput,
@@ -37,7 +31,7 @@ class Repl extends React.Component {
               onKeyPress={btnEnter}
             />
             <button
-              className={`upload-button ${commentInput ? 'button-on' : ''}`}
+              className={`uploadButton ${commentInput ? 'buttonOn' : ''}`}
               onClick={addCommentClick}
             >
               게시
