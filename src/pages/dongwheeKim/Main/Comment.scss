@@ -5,9 +5,9 @@
     color: black;
     font-size: 15px;
     font-weight: 700;
-  }
 
-  a:visited {
-    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
   }
 }

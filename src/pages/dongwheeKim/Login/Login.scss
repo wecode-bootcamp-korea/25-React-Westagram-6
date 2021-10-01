@@ -1,4 +1,4 @@
-.LoginDongWhee {
+.loginDongWhee {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,12 @@
         margin-bottom: 5px;
       }
 
-      input::placeholder {
+      &::placeholder {
         color: rgb(214, 214, 214);
         font-size: 12px;
       }
 
-      input:hover {
+      &:hover {
         border-color: #b9b9b9 #b9b9b9 #b9b9b9 #b9b9b9;
       }
 
