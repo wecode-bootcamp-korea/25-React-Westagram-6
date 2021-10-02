@@ -1,1 +1,60 @@
-// a
+.loginHoYoung {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  height: 500px;
+  margin-top: 150px;
+  margin-left: 550px;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(230, 230, 230);
+
+  h1 {
+    font-family: lobster;
+    font-size: 45px;
+    flex-grow: 1;
+    margin-top: 70px;
+  }
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    flex-grow: 2;
+    align-items: center;
+
+    input {
+      width: 270px;
+      height: 40px;
+      margin: 5px;
+      background-color: rgb(240, 240, 240);
+      border-radius: 5px;
+      border: 0;
+    }
+
+    .loginBtn {
+      width: 278px;
+      height: 40px;
+      margin: 20px;
+      background-color: #b9dffc;
+      color: white;
+      border-radius: 5px;
+      border: 0;
+
+      &.buttonOn {
+        background-color: #108dec;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  a {
+    margin-bottom: 50px;
+    font-size: 13px;
+    text-decoration: none;
+  }
+}

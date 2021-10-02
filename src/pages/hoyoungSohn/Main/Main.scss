@@ -1,1 +1,206 @@
-// a
+.mainHoYoung {
+  display: flex;
+  justify-content: center;
+
+  .feeds {
+    width: 550px;
+    margin-top: 50px;
+
+    article {
+      border: 1px solid rgb(230, 230, 230);
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .userInfo {
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 20px;
+          }
+        }
+
+        .fa-ellipsis-h {
+          margin-right: 15px;
+        }
+      }
+
+      .car {
+        margin-top: 15px;
+      }
+
+      .friendInfo {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+        margin-left: 15px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          border-radius: 60px;
+        }
+
+        span {
+          margin-left: 8px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+
+      .repl {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 99%;
+          height: 40px;
+          border: 0px;
+        }
+
+        .uploadButton {
+          width: 50px;
+          border: 0;
+          color: #b9dffc;
+          background-color: white;
+
+          &.buttonOn {
+            color: #108dec;
+          }
+        }
+      }
+    }
+  }
+
+  .likeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      margin-left: 8px;
+      border: none;
+      background-color: white;
+      text-decoration: none;
+      font-size: 23px;
+    }
+  }
+
+  .friends-reply {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .reply {
+    margin-top: 10px;
+    padding-left: 30px;
+    font-size: 13px;
+
+    li {
+      margin-bottom: 8px;
+      .bold {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .mainRight {
+    margin-left: 30px;
+    margin-top: 60px;
+
+    .rightHeader {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 45px;
+        border-radius: 30px;
+      }
+
+      .headerUser {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.headerUser span {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.headerUser a {
+  text-decoration: none;
+}
+
+.rightCenter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 300px;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.centerStory {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-left: 14px;
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+.storyPicture01 {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.storyPicture02 {
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.storyPicture03 {
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.storyPicture01 > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.storyPicture02 > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.storyPicture03 > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.storyPicture span {
+  margin-left: 14px;
+}
